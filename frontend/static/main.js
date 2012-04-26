@@ -2,7 +2,7 @@ window.Wine = Backbone.Model.extend();
 
 window.WineCollection = Backbone.Collection.extend({
     model: Wine,
-    url: "../api/wines"
+    url: "/api/wines/"
 });
 
 window.WineListView = Backbone.View.extend({
@@ -44,7 +44,7 @@ var AppRouter = Backbone.Router.extend({
     routes: {
         "": "list",
         "wines/:id": "wineDetails"
-    };
+    },
 
     list: function() {
         this.wineList = new WineCollection();
