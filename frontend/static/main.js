@@ -2,7 +2,10 @@ window.Wine = Backbone.Model.extend();
 
 window.WineCollection = Backbone.Collection.extend({
     model: Wine,
-    url: "/api/wines/"
+    url: "/api/wines/",
+    parse: function(response) {
+        return response.objects;
+    }
 });
 
 window.WineListView = Backbone.View.extend({
