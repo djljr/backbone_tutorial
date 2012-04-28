@@ -6,10 +6,17 @@
         <div class="leftArea">
             <ul id="sidebar"></ul>
         </div>
+        <div id="content">
+        </div>
+        <script type="text/tempalte" id="tpl-wine-details">
+            <label>Id:</label>
+            <input id="wineId" name="id" type="text" value="<%= id %>" disabled />
+
+            <label>Name:</label>
+            <input type="text" id="name" name="name" value="<%= name %>" required />
+        </script>
         <script type="text/template" id="tpl-wine-list-item">
             <li><a href='#wines/<%= id %>'><%= name %></a></li>
-        </script>
-        <script type="text/template" id="tpl-wine-details">
         </script>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
         <script src="/static/underscore.js"></script>
